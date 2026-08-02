@@ -173,8 +173,7 @@ RegisterNUICallback('closeMenu', function(_, cb)
     cb('ok')
 end)
 
-RegisterKeyMapping('menu', 'Open Menu', 'keyboard', Config.OpenMenu)
-
+RegisterKeyMapping('menu', 'Open Menu', 'keyboard', Config.OpenMenu or Config.OpenKey or 'I')
 local function restartHud()
     TriggerEvent('hud:client:playResetHudSounds')
     TMGCore.Functions.Notify(Lang:t('notify.hud_restart'), 'error')
